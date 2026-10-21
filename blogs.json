@@ -1,0 +1,43 @@
+{
+  "posts": [
+    {
+      "title": "Understanding Ayurveda and Holistic Well-being",
+      "slug": "understanding-ayurveda",
+      "url": "/blog/understanding-ayurveda.html",
+      "date": "2026-10-21",
+      "category": "Ayurveda",
+      "excerpt": "An introductory overview of Ayurveda and the role of individualised lifestyle guidance in wellness conversations.",
+      "image": "",
+      "published": true,
+      "metaTitle": "Understanding Ayurveda | Dr. BRC Premier Hospital",
+      "metaDescription": "Explore an introductory overview of Ayurveda and holistic well-being from Dr. BRC Premier Hospital, Gurugram.",
+      "author": "Dr. BRC Premier Hospital"
+    },
+    {
+      "title": "Building Mindful, Sustainable Daily Routines",
+      "slug": "mindful-daily-routines",
+      "url": "/blog/mindful-daily-routines.html",
+      "date": "2026-10-21",
+      "category": "Lifestyle",
+      "excerpt": "Ideas for discussing routines, rest, movement and everyday wellness with a qualified healthcare professional.",
+      "image": "",
+      "published": true,
+      "metaTitle": "Mindful Daily Routines | Dr. BRC Premier Hospital",
+      "metaDescription": "Read about sustainable everyday routines and general wellness from Dr. BRC Premier Hospital, Gurugram.",
+      "author": "Dr. BRC Premier Hospital"
+    },
+    {
+      "title": "Questions to Ask During a Wellness Consultation",
+      "slug": "wellness-consultation-questions",
+      "url": "/blog/wellness-consultation-questions.html",
+      "date": "2026-10-21",
+      "category": "Health Awareness",
+      "excerpt": "Prepare useful questions to discuss your individual needs with a qualified healthcare professional.",
+      "image": "",
+      "published": true,
+      "metaTitle": "Wellness Consultation Questions | Dr. BRC Premier Hospital",
+      "metaDescription": "Questions to consider asking during a wellness consultation at Dr. BRC Premier Hospital, Gurugram.",
+      "author": "Dr. BRC Premier Hospital"
+    }
+  ]
+}
