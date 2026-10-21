@@ -834,6 +834,9 @@ if(galleryTrack){
         <div class="journal-copy"><span class="journal-category">${category}${date ? ' · '+date : ''}</span><h3>${title}</h3><p>${excerpt}</p><p style="margin-top:14px"><a href="${url}">Read article ↗</a></p></div>
       </article>`;
     }).join('');
+    // Dynamically added cards are not picked up by the initial reveal observer.
+    // Make them visible so the reveal CSS does not keep them hidden.
+    target.querySelectorAll('.reveal').forEach(card => card.classList.add('is-visible'));
   } catch (error) {
     console.info('Blog list will use the fallback card until blogs.json is published.', error);
   }
