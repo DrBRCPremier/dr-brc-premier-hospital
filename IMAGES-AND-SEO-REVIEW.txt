@@ -1,7 +1,6 @@
-IMAGE AND SEO NOTES
+IMAGE AND CONTENT NOTES
 
-The homepage therapy directory now includes every individual therapy page in the therapies folder, with a matching locally stored SVG illustration and link to its dedicated landing page. The health-information directory lists every disease/condition page in the diseases folder and uses the corresponding locally stored SVG illustration. IPD, OPD and Daycare cards also use matching illustrations.
-
-Each detail page uses its matching local illustration where available. These are original stylised vector illustrations for design consistency, not clinical photographs or evidence of treatment outcomes. Replace them with approved hospital/therapy photos when available.
-
-The therapy and disease directories include client-side search to help visitors browse the longer lists. Review all clinical content with the hospital's qualified clinical team before publication. SEO improvements do not guarantee ranking positions; indexing, competition, technical performance and content quality also affect results.
+The duplicated 'Our services, therapies and areas of care' directory at the bottom of the homepage has been removed. The main Hospital Services, Therapies and Diseases sections remain.
+Therapies and diseases are organised into compact accordions, with search expanding matching groups. Four featured conditions remain visible; the remaining conditions are grouped below. All landing-page links remain in the HTML.
+Photo-style therapy and healthcare visuals have been added to the homepage cards and their corresponding landing pages. Most newly supplied visuals are AI-generated editorial illustrations, not photographs of Dr BRC Premier Hospital or actual patients. They must not be presented as documentary proof of treatments. Replace them with hospital-approved real photographs when available.
+Clinical content should be reviewed by the hospital's qualified clinical team before publication. No image or SEO change guarantees a Google ranking improvement.
