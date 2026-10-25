@@ -1,11 +1,7 @@
-IMAGE PLACEHOLDER GUIDE
-Homepage and detail pages use designed placeholders so no broken image links appear.
-When approved client images are ready, place them in images/page-images/ using these filenames:
-ipd.jpg, opd.jpg, daycare.jpg, naturopathy.jpg, hot-water-immersion.jpg, panchakarma.jpg, vamana.jpg, basti.jpg, nasya.jpg, raktmokshana.jpg, yoga.jpg, dip-diet.jpg, chronic-kidney-disease.jpg, diabetes.jpg, thyroid-conditions.jpg, chronic-liver-disease.jpg, cancer.jpg.
-Each detail page shows its suggested filename. Replace its .image-placeholder div with an img element whose src is /images/page-images/FILENAME.jpg and whose alt text accurately describes the image. Replace homepage .seo-card-image and .disease-image-slot placeholders in the same way.
-Use approved, non-graphic, accurate images; obtain consent for identifiable patients.
+IMAGE AND SEO NOTES
 
-SEO / CLINICAL REVIEW
-Pages have unique title tags, meta descriptions, canonical URLs, internal links, and basic structured data. The homepage has Hospital structured data and canonical metadata. The sitemap lists the new pages.
-The clinical text is deliberately cautious and informational. A qualified clinician must review and approve each disease/therapy page before publication. Do not promise cures or guaranteed outcomes, use unverified claims, or encourage replacing prescribed care.
-SEO improvements cannot guarantee rankings. Useful original content, accurate contact details, page speed, Google Search Console monitoring, relevant local listings and ongoing updates still matter.
+Local illustrative hero images have been added to each generated disease, therapy and service detail page under images/page-images/.
+These are original vector illustrations designed to match the site's dark-green, gold and terracotta palette. They are visual placeholders/illustrations, not clinical photographs or depictions of treatment outcomes. Replace them with approved real hospital/therapy images when available.
+The supplied Dr BRC Premier Hospital logo is used in the header on individual pages. A transparent-background copy is in assets/dr-brc-logo.png.
+The floating WhatsApp button is retained from the existing package.
+Have the clinical team review disease and therapy content before publication.

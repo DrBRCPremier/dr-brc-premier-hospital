@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="620" viewBox="0 0 840 620" role="img" aria-label="Diabetes illustrative artwork">
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#213f31"/><stop offset="1" stop-color="#10251d"/></linearGradient><radialGradient id="glow"><stop stop-color="#9fc4d8" stop-opacity=".18"/><stop offset="1" stop-color="#9fc4d8" stop-opacity="0"/></radialGradient></defs>
+  <rect width="840" height="620" rx="30" fill="url(#bg)"/><circle cx="420" cy="210" r="250" fill="url(#glow)"/>
+  <path d="M0 485 Q190 430 345 505 T840 470 V620 H0Z" fill="#0a1a14" opacity=".5"/>
+  <path d="M48 90 H172 M48 90 V160 M792 530 H668 M792 530 V460" stroke="#9fc4d8" stroke-width="2" opacity=".65"/>
+  
+        <circle cx="420" cy="210" r="116" fill="#9fc4d8" opacity=".10"/>
+        <circle cx="420" cy="210" r="82" fill="none" stroke="#9fc4d8" stroke-width="2" opacity=".8"/>
+        <path d="M370 205 C342 158 372 125 408 145 C430 111 483 132 483 174 C510 207 475 245 445 253 C418 275 377 250 370 205Z" fill="#9fc4d8" opacity=".78"/>
+        <path d="M410 153 C397 181 407 207 432 219 C451 229 456 244 447 258" fill="none" stroke="#10251d" stroke-width="6" stroke-linecap="round"/>
+        <path d="M357 284 Q420 312 484 281" fill="none" stroke="#9fc4d8" stroke-width="2" opacity=".6"/>
+        
+  <text x="420" y="420" fill="#f3eddd" font-family="Georgia,serif" font-size="34" text-anchor="middle">Diabetes</text>
+  <text x="420" y="458" fill="#b9c7bb" font-family="Arial,sans-serif" font-size="14" letter-spacing="4" text-anchor="middle">DISEASE · DR BRC PREMIER HOSPITAL</text>
+  <path d="M350 493 H490" stroke="#9fc4d8" stroke-width="2" stroke-linecap="round"/>
+</svg>

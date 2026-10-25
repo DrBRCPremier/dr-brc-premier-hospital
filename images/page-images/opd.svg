@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="620" viewBox="0 0 840 620" role="img" aria-label="OPD — In-Person &amp; Virtual illustrative artwork">
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#213f31"/><stop offset="1" stop-color="#10251d"/></linearGradient><radialGradient id="glow"><stop stop-color="#d99478" stop-opacity=".18"/><stop offset="1" stop-color="#d99478" stop-opacity="0"/></radialGradient></defs>
+  <rect width="840" height="620" rx="30" fill="url(#bg)"/><circle cx="420" cy="210" r="250" fill="url(#glow)"/>
+  <path d="M0 485 Q190 430 345 505 T840 470 V620 H0Z" fill="#0a1a14" opacity=".5"/>
+  <path d="M48 90 H172 M48 90 V160 M792 530 H668 M792 530 V460" stroke="#d99478" stroke-width="2" opacity=".65"/>
+  
+        <circle cx="420" cy="210" r="116" fill="#d99478" opacity=".10"/>
+        <circle cx="420" cy="210" r="82" fill="none" stroke="#d99478" stroke-width="2" opacity=".8"/>
+        <path d="M420 158 C390 125 355 151 368 184 C378 208 406 226 420 240 C434 226 462 208 472 184 C485 151 450 125 420 158Z" fill="#d99478" opacity=".78"/>
+        <path d="M420 240 L420 278 M396 263 L444 263" stroke="#d99478" stroke-width="5" stroke-linecap="round"/>
+        
+  <text x="420" y="420" fill="#f3eddd" font-family="Georgia,serif" font-size="34" text-anchor="middle">OPD — In-Person &amp; Virtual</text>
+  <text x="420" y="458" fill="#b9c7bb" font-family="Arial,sans-serif" font-size="14" letter-spacing="4" text-anchor="middle">SERVICE · DR BRC PREMIER HOSPITAL</text>
+  <path d="M350 493 H490" stroke="#d99478" stroke-width="2" stroke-linecap="round"/>
+</svg>

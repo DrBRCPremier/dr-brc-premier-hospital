@@ -1,23 +1,31 @@
-DR BRC PREMIER HOSPITAL — SEO PAGE UPGRADE
+DR BRC PREMIER HOSPITAL — WEBSITE SEO & CONTENT STRUCTURE UPDATE
 
-Package contents:
-- index.html: updated homepage with image placeholders, links to unique pages, SEO metadata and Hospital structured data.
-- services/: IPD, OPD and Daycare pages.
-- therapies/: Naturopathy, Hot Water Immersion, Panchakarma, Vamana, Basti, Nasya, Raktmokshana, Yoga and DIP Diet pages.
-- diseases/: CKD, Diabetes, Thyroid, Chronic Liver Disease and Cancer pages.
-- sitemap.xml and robots.txt.
-- IMAGES-AND-SEO-REVIEW.txt: instructions for replacing placeholders with approved images and clinical review.
+WHAT IS INCLUDED
+- Homepage directory with image slots and links to service, therapy and disease pages.
+- 3 service pages: IPD, OPD (in-person and virtual), Daycare.
+- 13 disease/condition pages based on the doctor's list.
+- 32 therapy pages based on the doctor's list, including Panchakarma and sub-therapies.
+- Header dropdowns link to the full service, therapy and disease page lists.
+- Floating WhatsApp button fixed at the bottom-right on homepage and detail pages.
+- sitemap.xml includes the new page URLs; robots.txt points to the sitemap.
+- Existing homepage embedded media is preserved from the previous SEO package.
 
-PUBLISHING STEPS
-1. Back up the current local repository.
-2. Copy the package contents into the local dr-brc-premier-hospital repository, keeping folder structure. Replace index.html, sitemap.xml and robots.txt when asked.
-3. Open GitHub Desktop and review all changed/new files.
-4. Commit with a message like "Add SEO service therapy and disease pages".
-5. Push origin and wait for GitHub Pages to deploy.
-6. Test homepage dropdowns, detail pages and https://drbrcpremier.com/sitemap.xml.
+CORRECTED TERMS
+Potali; Akshitarpan; Zero Volt Therapy; Neem Kerala Therapy. Vamana and Raktmokshana are retained from the earlier explicit list.
 
-IMAGES
-Image slots are intentionally styled placeholders, not broken links. Add approved image files under images/page-images/ using the filenames in IMAGES-AND-SEO-REVIEW.txt and replace the placeholder markup in the relevant HTML.
+WHATSAPP
+The floating button uses the number found in the existing website source: +91 98102 85906 (international URL format: https://wa.me/919810285906). Verify this is the intended enquiry number before publishing.
 
-CLINICAL REVIEW
-These are starter drafts. The hospital's qualified clinical team must review every disease and therapy page before publication. Avoid cure claims, unverified treatment claims and keyword stuffing. SEO structure does not guarantee a particular Google ranking.
+IMAGE SLOTS
+Homepage cards and detail pages include image placeholders. Add approved images later using the suggested paths shown on the page. Create images/page-images/ and use the exact suggested filenames. These are visual placeholders, not broken image references.
+
+IMPORTANT CONTENT REVIEW
+Disease and therapy pages are general informational drafts, not medical advice or treatment claims. Ask the hospital's qualified clinical team to review and approve all content before publishing. In particular, confirm exact clinical definitions and spelling of the hospital's proprietary therapy names. Avoid claims that a therapy cures or treats a disease unless properly substantiated and approved.
+
+PUBLISH
+1. Back up your current local repository.
+2. Extract this ZIP.
+3. Copy the package contents into the root of the local dr-brc-premier-hospital repository, preserving folders.
+4. Review the file changes in GitHub Desktop.
+5. Commit, then Push origin.
+6. Check the homepage, dropdowns, all new pages, the WhatsApp link, and sitemap after GitHub Pages deploys.
