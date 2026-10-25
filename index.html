@@ -469,6 +469,36 @@ html[data-theme="dark"] .hospital-service-card h3,html[data-theme="dark"] .direc
 @media(max-width:760px){.seo-card-image{min-height:125px}.disease-image-slot{flex-basis:62px;width:62px;height:56px}.disease-item{gap:9px;padding:12px}}
 
  .nav-dropdown-menu{max-height:72vh;overflow-y:auto;min-width:230px}.nav-dropdown-menu a{white-space:normal}.nav-dropdown:focus-within .nav-dropdown-menu{display:block}
+
+/* Image-led directory cards: shared visual system for homepage and detail-page imagery. */
+.seo-card-image{display:block;min-height:0;height:auto;aspect-ratio:16/9;margin:-12px -12px 22px;border:1px solid var(--line);border-radius:15px;background:#172820;overflow:hidden;text-decoration:none}
+.seo-card-image img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .35s ease}
+.seo-card-image:hover img,.disease-card-image:hover img{transform:scale(1.035)}
+.directory-grid.therapy-all-grid{grid-template-columns:repeat(4,minmax(0,1fr));align-items:stretch;gap:18px}
+.directory-card.visual-directory-card{min-height:0;display:flex;flex-direction:column;padding:22px;overflow:hidden}
+.directory-card.visual-directory-card h3{font-size:1.35rem;line-height:1.25;margin:11px 0}
+.directory-card.visual-directory-card p{font-size:.84rem;line-height:1.65;flex:1}
+.directory-card-top .card-kind,.card-kind{font-size:.65rem;letter-spacing:.12em;color:var(--rust);font-weight:800}
+.directory-card-link{display:inline-flex;gap:7px;align-items:center;margin-top:14px;color:var(--forest);font-size:.82rem;font-weight:800;text-decoration:none}
+.disease-card-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;align-items:stretch}
+.disease-card{border:1px solid var(--line);border-radius:20px;background:var(--paper);overflow:hidden;display:flex;flex-direction:column;min-width:0;transition:transform .25s,border-color .25s}
+.disease-card:hover{transform:translateY(-3px);border-color:var(--gold)}
+.disease-card-image{display:block;aspect-ratio:16/9;overflow:hidden;background:#172820}
+.disease-card-image img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .35s ease}
+.disease-card-copy{padding:20px;display:flex;flex-direction:column;align-items:flex-start;flex:1}
+.disease-card h3{font-size:1.35rem;line-height:1.25;margin:10px 0;color:var(--ink)}
+.disease-card h3 a{color:inherit;text-decoration:none}
+.disease-card p{font-size:.84rem;line-height:1.65;color:var(--muted);flex:1}
+.directory-toolbar{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:24px 0 18px}
+.directory-toolbar label{font-size:.8rem;font-weight:800;color:var(--ink)}
+.directory-toolbar input{width:min(100%,360px);padding:12px 15px;border:1px solid var(--line);border-radius:999px;background:var(--paper);color:var(--ink);font:inherit;font-size:.88rem;outline-offset:3px}
+.directory-toolbar span{margin-left:auto;font-size:.78rem;color:var(--muted)}
+.directory-empty{padding:20px;border:1px dashed var(--line);border-radius:14px;color:var(--muted)}
+html[data-theme="dark"] .disease-card{background:#192a21;border-color:#35483b}
+html[data-theme="dark"] .directory-card-link{color:#e5d4a5}
+@media(max-width:1100px){.directory-grid.therapy-all-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.disease-card-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:760px){.directory-grid.therapy-all-grid,.disease-card-grid{grid-template-columns:1fr}.directory-toolbar input{width:100%;flex:1}.directory-toolbar span{margin-left:0}.directory-card.visual-directory-card{padding:20px}.seo-card-image{margin:-8px -8px 18px}}
+
 </style>
 
 <meta name="description" content="Explore hospital services, OPD, IPD, daycare, therapies and health information at Dr BRC Premier Hospital, Sector 42, Gurugram. Contact our team for service and appointment enquiries.">
@@ -528,36 +558,283 @@ html[data-theme="dark"] .hospital-service-card h3,html[data-theme="dark"] .direc
  <div class="wrap">
   <div class="section-head reveal"><span class="eyebrow">Hospital services</span><h2>Care pathways for <span style="color:var(--rust)">different needs.</span></h2><p>Explore the hospital services available at Dr BRC Premier Hospital. Contact our team to confirm suitability, availability and appointment details.</p></div>
   <div class="hospital-service-grid">
-   <article class="hospital-service-card reveal"><a class="seo-card-image" href="/services/ipd.html"><span>Image slot</span><small>Add: images/page-images/ipd.jpg</small></a><span class="service-index">01</span><h3>IPD</h3><p>In-patient care. Speak with our team about admission enquiries and service availability.</p><a href="/services/ipd.html">Explore IPD ↗</a></article>
-   <article class="hospital-service-card reveal delay-1"><a class="seo-card-image" href="/services/opd.html"><span>Image slot</span><small>Add: images/page-images/opd.jpg</small></a><span class="service-index">02</span><h3>OPD</h3><p>Out-patient consultations available in-person and virtually, subject to appointment availability.</p><a href="/services/opd.html">Explore OPD ↗</a><div class="mini-tags"><span>In-person</span><span>Virtual</span></div></article>
-   <article class="hospital-service-card reveal delay-2"><a class="seo-card-image" href="/services/daycare.html"><span>Image slot</span><small>Add: images/page-images/daycare.jpg</small></a><span class="service-index">03</span><h3>Daycare</h3><p>Ask our team about daycare services, scheduling and whether a service is appropriate for you.</p><a href="/services/daycare.html">Explore Daycare ↗</a></article>
+   <article class="hospital-service-card reveal"><a class="seo-card-image" href="/services/ipd.html" aria-label="Explore IPD services"><img src="/images/page-images/ipd.svg" alt="Illustration for IPD at Dr BRC Premier Hospital" width="840" height="620" loading="lazy" decoding="async"></a><span class="service-index">01</span><h3>IPD</h3><p>In-patient care. Speak with our team about admission enquiries and service availability.</p><a href="/services/ipd.html">Explore IPD ↗</a></article>
+   <article class="hospital-service-card reveal delay-1"><a class="seo-card-image" href="/services/opd.html" aria-label="Explore OPD services"><img src="/images/page-images/opd.svg" alt="Illustration for OPD at Dr BRC Premier Hospital" width="840" height="620" loading="lazy" decoding="async"></a><span class="service-index">02</span><h3>OPD</h3><p>Out-patient consultations available in-person and virtually, subject to appointment availability.</p><a href="/services/opd.html">Explore OPD ↗</a><div class="mini-tags"><span>In-person</span><span>Virtual</span></div></article>
+   <article class="hospital-service-card reveal delay-2"><a class="seo-card-image" href="/services/daycare.html" aria-label="Explore Daycare services"><img src="/images/page-images/daycare.svg" alt="Illustration for Daycare at Dr BRC Premier Hospital" width="840" height="620" loading="lazy" decoding="async"></a><span class="service-index">03</span><h3>Daycare</h3><p>Ask our team about daycare services, scheduling and whether a service is appropriate for you.</p><a href="/services/daycare.html">Explore Daycare ↗</a></article>
   </div>
  </div>
 </section>
 
 <section class="section therapy-directory" id="therapies">
- <div class="wrap">
-  <div class="section-head reveal"><span class="eyebrow">Therapies &amp; wellness</span><h2>Explore our <span style="color:var(--rust)">therapy offerings.</span></h2><p>Therapies and lifestyle programmes should be discussed with a qualified healthcare professional, based on individual circumstances.</p></div>
-  <div class="directory-grid">
-   <article class="directory-card reveal"><a class="seo-card-image" href="/therapies/naturopathy.html"><span>Image slot</span><small>Add: images/page-images/naturopathy.jpg</small></a><div class="directory-card-top"><span>01</span><h3><a href="/therapies/naturopathy.html">Naturopathy</a></h3></div><p>Nature-based and lifestyle-oriented approaches.</p><ul><li><a href="/therapies/hot-water-immersion.html">Hot water immersion ↗</a></li></ul></article>
-   <article class="directory-card reveal delay-1"><a class="seo-card-image" href="/therapies/panchakarma.html"><span>Image slot</span><small>Add: images/page-images/panchakarma.jpg</small></a><div class="directory-card-top"><span>02</span><h3><a href="/therapies/panchakarma.html">Panchakarma</a></h3></div><p>Traditional Ayurvedic procedures offered only after appropriate assessment.</p><ul><li><a href="/therapies/vamana.html">Vamana</a></li><li><a href="/therapies/basti.html">Basti</a></li><li><a href="/therapies/nasya.html">Nasya</a></li><li><a href="/therapies/raktmokshana.html">Raktmokshana</a></li></ul></article>
-   <article class="directory-card reveal delay-2"><a class="seo-card-image" href="/therapies/yoga.html"><span>Image slot</span><small>Add: images/page-images/yoga.jpg</small></a><div class="directory-card-top"><span>03</span><h3><a href="/therapies/yoga.html">Yoga</a></h3></div><p>Ask about yoga and movement practices suitable for your needs.</p></article>
-   <article class="directory-card reveal delay-3"><a class="seo-card-image" href="/therapies/dip-diet.html"><span>Image slot</span><small>Add: images/page-images/dip-diet.jpg</small></a><div class="directory-card-top"><span>04</span><h3><a href="/therapies/dip-diet.html">DIP Diet</a></h3></div><p>Discuss the DIP Diet programme and nutrition guidance with our team.</p></article>
+  <div class="section-head reveal"><span class="eyebrow">Therapies &amp; wellness</span><h2>Explore our <span style="color:var(--rust)">therapy offerings.</span></h2><p>Browse the therapies and lifestyle programmes listed by Dr BRC Premier Hospital. Please discuss availability and suitability with a qualified healthcare professional.</p></div>
+  <div class="directory-toolbar"><label for="therapySearch">Find a therapy</label><input id="therapySearch" type="search" placeholder="Search therapies…" autocomplete="off"><span id="therapyCount">32 therapies</span></div>
+  <div class="directory-grid therapy-all-grid" id="therapyDirectoryGrid">
+    <article class="directory-card visual-directory-card reveal delay-0">
+      <a class="seo-card-image" href="/therapies/abhyanga.html" aria-label="Read about Abhyanga"><img src="/images/page-images/abhyanga.svg" alt="Illustration for Abhyanga at Dr BRC Premier Hospital" width="840" height="620" loading="lazy" decoding="async"></a>
+      <div class="directory-card-top"><span>01</span><span class="card-kind">THERAPY</span></div>
+      <h3><a href="/therapies/abhyanga.html">Abhyanga</a></h3><p>Read an overview of this traditional therapy and discuss suitability with a qualified healthcare professional.</p>
+      <a class="directory-card-link" href="/therapies/abhyanga.html">Explore details <span>↗</span></a>
+    </article>
+    <article class="directory-card visual-directory-card reveal delay-1">
+      <a class="seo-card-image" href="/therapies/acupressure.html" aria-label="Read about Acupressure"><img src="/images/page-images/acupressure.svg" alt="Illustration for Acupressure at Dr BRC Premier Hospital" width="840" height="620" loading="lazy" decoding="async"></a>
+      <div class="directory-card-top"><span>02</span><span class="card-kind">THERAPY</span></div>
+      <h3><a href="/therapies/acupressure.html">Acupressure</a></h3><p>Explore this therapy and speak with our team about availability and individual suitability.</p>
+      <a class="directory-card-link" href="/therapies/acupressure.html">Explore details <span>↗</span></a>
+    </article>
+    <article class="directory-card visual-directory-card reveal delay-2">
+      <a class="seo-card-image" href="/therapies/akshitarpan.html" aria-label="Read about Akshitarpan"><img src="/images/page-images/akshitarpan.svg" alt="Illustration for Akshitarpan at Dr BRC Premier Hospital" width="840" height="620" loading="lazy" decoding="async"></a>
+      <div class="directory-card-top"><span>03</span><span class="card-kind">THERAPY</span></div>
+      <h3><a href="/therapies/akshitarpan.html">Akshitarpan</a></h3><p>Read an overview of this traditional therapy and discuss suitability with a qualified healthcare professional.</p>
+      <a class="directory-card-link" href="/therapies/akshitarpan.html">Explore details <span>↗</span></a>
+    </article>
+    <article class="directory-card visual-directory-card reveal">
+      <a class="seo-card-image" href="/therapies/ark-swedana.html" aria-label="Read about Ark Swedana"><img src="/images/page-images/ark-swedana.svg" alt="Illustration for Ark Swedana at Dr BRC Premier Hospital" width="840" height="620" loading="lazy" decoding="async"></a>
+      <div class="directory-card-top"><span>04</span><span class="card-kind">THERAPY</span></div>
+      <h3><a href="/therapies/ark-swedana.html">Ark Swedana</a></h3><p>Read an overview of this traditional therapy and discuss suitability with a qualified healthcare professional.</p>
+      <a class="directory-card-link" href="/therapies/ark-swedana.html">Explore details <span>↗</span></a>
+    </article>
+    <article class="directory-card visual-directory-card reveal delay-0">
+      <a class="seo-card-image" href="/therapies/basti.html" aria-label="Read about Basti"><img src="/images/page-images/basti.svg" alt="Illustration for Basti at Dr BRC Premier Hospital" width="840" height="620" loading="lazy" decoding="async"></a>
+      <div class="directory-card-top"><span>05</span><span class="card-kind">THERAPY</span></div>
+      <h3><a href="/therapies/basti.html">Basti</a></h3><p>Read an overview of this traditional therapy and discuss suitability with a qualified healthcare professional.</p>
+      <a class="directory-card-link" href="/therapies/basti.html">Explore details <span>↗</span></a>
+    </article>
+    <article class="directory-card visual-directory-card reveal delay-1">
+      <a class="seo-card-image" href="/therapies/castor-oil-wrap.html" aria-label="Read about Castor oil wrap"><img src="/images/page-images/castor-oil-wrap.svg" alt="Illustration for Castor oil wrap at Dr BRC Premier Hospital" width="840" height="620" loading="lazy" decoding="async"></a>
+      <div class="directory-card-top"><span>06</span><span class="card-kind">THERAPY</span></div>
+      <h3><a href="/therapies/castor-oil-wrap.html">Castor oil wrap</a></h3><p>Learn about the practice, service availability and suitability through a consultation.</p>
+      <a class="directory-card-link" href="/therapies/castor-oil-wrap.html">Explore details <span>↗</span></a>
+    </article>
+    <article class="directory-card visual-directory-card reveal delay-2">
+      <a class="seo-card-image" href="/therapies/cupping-therapy.html" aria-label="Read about Cupping therapy"><img src="/images/page-images/cupping-therapy.svg" alt="Illustration for Cupping therapy at Dr BRC Premier Hospital" width="840" height="620" loading="lazy" decoding="async"></a>
+      <div class="directory-card-top"><span>07</span><span class="card-kind">THERAPY</span></div>
+      <h3><a href="/therapies/cupping-therapy.html">Cupping therapy</a></h3><p>Explore this therapy and speak with our team about availability and individual suitability.</p>
+      <a class="directory-card-link" href="/therapies/cupping-therapy.html">Explore details <span>↗</span></a>
+    </article>
+    <article class="directory-card visual-directory-card reveal">
+      <a class="seo-card-image" href="/therapies/dip-diet.html" aria-label="Read about DIP Diet"><img src="/images/page-images/dip-diet.svg" alt="Illustration for DIP Diet at Dr BRC Premier Hospital" width="840" height="620" loading="lazy" decoding="async"></a>
+      <div class="directory-card-top"><span>08</span><span class="card-kind">THERAPY</span></div>
+      <h3><a href="/therapies/dip-diet.html">DIP Diet</a></h3><p>Discuss nutrition and the DIP Diet programme with a qualified healthcare professional.</p>
+      <a class="directory-card-link" href="/therapies/dip-diet.html">Explore details <span>↗</span></a>
+    </article>
+    <article class="directory-card visual-directory-card reveal delay-0">
+      <a class="seo-card-image" href="/therapies/hdt-head-down-tilt.html" aria-label="Read about HDT (Head Down Tilt)"><img src="/images/page-images/hdt-head-down-tilt.svg" alt="Illustration for HDT (Head Down Tilt) at Dr BRC Premier Hospital" width="840" height="620" loading="lazy" decoding="async"></a>
+      <div class="directory-card-top"><span>09</span><span class="card-kind">THERAPY</span></div>
+      <h3><a href="/therapies/hdt-head-down-tilt.html">HDT (Head Down Tilt)</a></h3><p>Learn about the practice, service availability and suitability through a consultation.</p>
+      <a class="directory-card-link" href="/therapies/hdt-head-down-tilt.html">Explore details <span>↗</span></a>
+    </article>
+    <article class="directory-card visual-directory-card reveal delay-1">
+      <a class="seo-card-image" href="/therapies/hot-water-immersion.html" aria-label="Read about Hot water immersion"><img src="/images/page-images/hot-water-immersion.svg" alt="Illustration for Hot water immersion at Dr BRC Premier Hospital" width="840" height="620" loading="lazy" decoding="async"></a>
+      <div class="directory-card-top"><span>10</span><span class="card-kind">THERAPY</span></div>
+      <h3><a href="/therapies/hot-water-immersion.html">Hot water immersion</a></h3><p>Information about this naturopathy practice and questions to discuss with the care team.</p>
+      <a class="directory-card-link" href="/therapies/hot-water-immersion.html">Explore details <span>↗</span></a>
+    </article>
+    <article class="directory-card visual-directory-card reveal delay-2">
+      <a class="seo-card-image" href="/therapies/hridaya-basti.html" aria-label="Read about Hridaya Basti"><img src="/images/page-images/hridaya-basti.svg" alt="Illustration for Hridaya Basti at Dr BRC Premier Hospital" width="840" height="620" loading="lazy" decoding="async"></a>
+      <div class="directory-card-top"><span>11</span><span class="card-kind">THERAPY</span></div>
+      <h3><a href="/therapies/hridaya-basti.html">Hridaya Basti</a></h3><p>Read an overview of this traditional therapy and discuss suitability with a qualified healthcare professional.</p>
+      <a class="directory-card-link" href="/therapies/hridaya-basti.html">Explore details <span>↗</span></a>
+    </article>
+    <article class="directory-card visual-directory-card reveal">
+      <a class="seo-card-image" href="/therapies/janu-basti.html" aria-label="Read about Janu Basti"><img src="/images/page-images/janu-basti.svg" alt="Illustration for Janu Basti at Dr BRC Premier Hospital" width="840" height="620" loading="lazy" decoding="async"></a>
+      <div class="directory-card-top"><span>12</span><span class="card-kind">THERAPY</span></div>
+      <h3><a href="/therapies/janu-basti.html">Janu Basti</a></h3><p>Read an overview of this traditional therapy and discuss suitability with a qualified healthcare professional.</p>
+      <a class="directory-card-link" href="/therapies/janu-basti.html">Explore details <span>↗</span></a>
+    </article>
+    <article class="directory-card visual-directory-card reveal delay-0">
+      <a class="seo-card-image" href="/therapies/kashayadhara-pinda.html" aria-label="Read about Kashayadhara Pinda"><img src="/images/page-images/kashayadhara-pinda.svg" alt="Illustration for Kashayadhara Pinda at Dr BRC Premier Hospital" width="840" height="620" loading="lazy" decoding="async"></a>
+      <div class="directory-card-top"><span>13</span><span class="card-kind">THERAPY</span></div>
+      <h3><a href="/therapies/kashayadhara-pinda.html">Kashayadhara Pinda</a></h3><p>Read an overview of this traditional therapy and discuss suitability with a qualified healthcare professional.</p>
+      <a class="directory-card-link" href="/therapies/kashayadhara-pinda.html">Explore details <span>↗</span></a>
+    </article>
+    <article class="directory-card visual-directory-card reveal delay-1">
+      <a class="seo-card-image" href="/therapies/kati-basti.html" aria-label="Read about Kati Basti"><img src="/images/page-images/kati-basti.svg" alt="Illustration for Kati Basti at Dr BRC Premier Hospital" width="840" height="620" loading="lazy" decoding="async"></a>
+      <div class="directory-card-top"><span>14</span><span class="card-kind">THERAPY</span></div>
+      <h3><a href="/therapies/kati-basti.html">Kati Basti</a></h3><p>Read an overview of this traditional therapy and discuss suitability with a qualified healthcare professional.</p>
+      <a class="directory-card-link" href="/therapies/kati-basti.html">Explore details <span>↗</span></a>
+    </article>
+    <article class="directory-card visual-directory-card reveal delay-2">
+      <a class="seo-card-image" href="/therapies/leech-therapy.html" aria-label="Read about Leech therapy"><img src="/images/page-images/leech-therapy.svg" alt="Illustration for Leech therapy at Dr BRC Premier Hospital" width="840" height="620" loading="lazy" decoding="async"></a>
+      <div class="directory-card-top"><span>15</span><span class="card-kind">THERAPY</span></div>
+      <h3><a href="/therapies/leech-therapy.html">Leech therapy</a></h3><p>Explore this therapy and speak with our team about availability and individual suitability.</p>
+      <a class="directory-card-link" href="/therapies/leech-therapy.html">Explore details <span>↗</span></a>
+    </article>
+    <article class="directory-card visual-directory-card reveal">
+      <a class="seo-card-image" href="/therapies/lepan.html" aria-label="Read about Lepan"><img src="/images/page-images/lepan.svg" alt="Illustration for Lepan at Dr BRC Premier Hospital" width="840" height="620" loading="lazy" decoding="async"></a>
+      <div class="directory-card-top"><span>16</span><span class="card-kind">THERAPY</span></div>
+      <h3><a href="/therapies/lepan.html">Lepan</a></h3><p>Read an overview of this traditional therapy and discuss suitability with a qualified healthcare professional.</p>
+      <a class="directory-card-link" href="/therapies/lepan.html">Explore details <span>↗</span></a>
+    </article>
+    <article class="directory-card visual-directory-card reveal delay-0">
+      <a class="seo-card-image" href="/therapies/lower-leg-hot-water-immersion.html" aria-label="Read about Lower-leg hot water immersion"><img src="/images/page-images/lower-leg-hot-water-immersion.svg" alt="Illustration for Lower-leg hot water immersion at Dr BRC Premier Hospital" width="840" height="620" loading="lazy" decoding="async"></a>
+      <div class="directory-card-top"><span>17</span><span class="card-kind">THERAPY</span></div>
+      <h3><a href="/therapies/lower-leg-hot-water-immersion.html">Lower-leg hot water immersion</a></h3><p>Information about this naturopathy practice and questions to discuss with the care team.</p>
+      <a class="directory-card-link" href="/therapies/lower-leg-hot-water-immersion.html">Explore details <span>↗</span></a>
+    </article>
+    <article class="directory-card visual-directory-card reveal delay-1">
+      <a class="seo-card-image" href="/therapies/mud-therapy.html" aria-label="Read about Mud therapy"><img src="/images/page-images/mud-therapy.svg" alt="Illustration for Mud therapy at Dr BRC Premier Hospital" width="840" height="620" loading="lazy" decoding="async"></a>
+      <div class="directory-card-top"><span>18</span><span class="card-kind">THERAPY</span></div>
+      <h3><a href="/therapies/mud-therapy.html">Mud therapy</a></h3><p>Learn about the practice, service availability and suitability through a consultation.</p>
+      <a class="directory-card-link" href="/therapies/mud-therapy.html">Explore details <span>↗</span></a>
+    </article>
+    <article class="directory-card visual-directory-card reveal delay-2">
+      <a class="seo-card-image" href="/therapies/nabhi-basti.html" aria-label="Read about Nabhi Basti"><img src="/images/page-images/nabhi-basti.svg" alt="Illustration for Nabhi Basti at Dr BRC Premier Hospital" width="840" height="620" loading="lazy" decoding="async"></a>
+      <div class="directory-card-top"><span>19</span><span class="card-kind">THERAPY</span></div>
+      <h3><a href="/therapies/nabhi-basti.html">Nabhi Basti</a></h3><p>Read an overview of this traditional therapy and discuss suitability with a qualified healthcare professional.</p>
+      <a class="directory-card-link" href="/therapies/nabhi-basti.html">Explore details <span>↗</span></a>
+    </article>
+    <article class="directory-card visual-directory-card reveal">
+      <a class="seo-card-image" href="/therapies/nasya.html" aria-label="Read about Nasya"><img src="/images/page-images/nasya.svg" alt="Illustration for Nasya at Dr BRC Premier Hospital" width="840" height="620" loading="lazy" decoding="async"></a>
+      <div class="directory-card-top"><span>20</span><span class="card-kind">THERAPY</span></div>
+      <h3><a href="/therapies/nasya.html">Nasya</a></h3><p>Read an overview of this traditional therapy and discuss suitability with a qualified healthcare professional.</p>
+      <a class="directory-card-link" href="/therapies/nasya.html">Explore details <span>↗</span></a>
+    </article>
+    <article class="directory-card visual-directory-card reveal delay-0">
+      <a class="seo-card-image" href="/therapies/naturopathy.html" aria-label="Read about Naturopathy"><img src="/images/page-images/naturopathy.svg" alt="Illustration for Naturopathy at Dr BRC Premier Hospital" width="840" height="620" loading="lazy" decoding="async"></a>
+      <div class="directory-card-top"><span>21</span><span class="card-kind">THERAPY</span></div>
+      <h3><a href="/therapies/naturopathy.html">Naturopathy</a></h3><p>Explore nature-based and lifestyle-oriented approaches, discussed with our care team.</p>
+      <a class="directory-card-link" href="/therapies/naturopathy.html">Explore details <span>↗</span></a>
+    </article>
+    <article class="directory-card visual-directory-card reveal delay-1">
+      <a class="seo-card-image" href="/therapies/neem-kerala-therapy.html" aria-label="Read about Neem Kerala Therapy"><img src="/images/page-images/neem-kerala-therapy.svg" alt="Illustration for Neem Kerala Therapy at Dr BRC Premier Hospital" width="840" height="620" loading="lazy" decoding="async"></a>
+      <div class="directory-card-top"><span>22</span><span class="card-kind">THERAPY</span></div>
+      <h3><a href="/therapies/neem-kerala-therapy.html">Neem Kerala Therapy</a></h3><p>Learn about the practice, service availability and suitability through a consultation.</p>
+      <a class="directory-card-link" href="/therapies/neem-kerala-therapy.html">Explore details <span>↗</span></a>
+    </article>
+    <article class="directory-card visual-directory-card reveal delay-2">
+      <a class="seo-card-image" href="/therapies/panchakarma.html" aria-label="Read about Panchakarma"><img src="/images/page-images/panchakarma.svg" alt="Illustration for Panchakarma at Dr BRC Premier Hospital" width="840" height="620" loading="lazy" decoding="async"></a>
+      <div class="directory-card-top"><span>23</span><span class="card-kind">THERAPY</span></div>
+      <h3><a href="/therapies/panchakarma.html">Panchakarma</a></h3><p>Learn about traditional Ayurvedic procedures and the importance of individual assessment.</p>
+      <a class="directory-card-link" href="/therapies/panchakarma.html">Explore details <span>↗</span></a>
+    </article>
+    <article class="directory-card visual-directory-card reveal">
+      <a class="seo-card-image" href="/therapies/potali.html" aria-label="Read about Potali"><img src="/images/page-images/potali.svg" alt="Illustration for Potali at Dr BRC Premier Hospital" width="840" height="620" loading="lazy" decoding="async"></a>
+      <div class="directory-card-top"><span>24</span><span class="card-kind">THERAPY</span></div>
+      <h3><a href="/therapies/potali.html">Potali</a></h3><p>Read an overview of this traditional therapy and discuss suitability with a qualified healthcare professional.</p>
+      <a class="directory-card-link" href="/therapies/potali.html">Explore details <span>↗</span></a>
+    </article>
+    <article class="directory-card visual-directory-card reveal delay-0">
+      <a class="seo-card-image" href="/therapies/raktmokshana.html" aria-label="Read about Raktmokshana"><img src="/images/page-images/raktmokshana.svg" alt="Illustration for Raktmokshana at Dr BRC Premier Hospital" width="840" height="620" loading="lazy" decoding="async"></a>
+      <div class="directory-card-top"><span>25</span><span class="card-kind">THERAPY</span></div>
+      <h3><a href="/therapies/raktmokshana.html">Raktmokshana</a></h3><p>Read an overview of this traditional therapy and discuss suitability with a qualified healthcare professional.</p>
+      <a class="directory-card-link" href="/therapies/raktmokshana.html">Explore details <span>↗</span></a>
+    </article>
+    <article class="directory-card visual-directory-card reveal delay-1">
+      <a class="seo-card-image" href="/therapies/shashtishali-pinda-swedana.html" aria-label="Read about Shashtishali Pinda Swedana"><img src="/images/page-images/shashtishali-pinda-swedana.svg" alt="Illustration for Shashtishali Pinda Swedana at Dr BRC Premier Hospital" width="840" height="620" loading="lazy" decoding="async"></a>
+      <div class="directory-card-top"><span>26</span><span class="card-kind">THERAPY</span></div>
+      <h3><a href="/therapies/shashtishali-pinda-swedana.html">Shashtishali Pinda Swedana</a></h3><p>Read an overview of this traditional therapy and discuss suitability with a qualified healthcare professional.</p>
+      <a class="directory-card-link" href="/therapies/shashtishali-pinda-swedana.html">Explore details <span>↗</span></a>
+    </article>
+    <article class="directory-card visual-directory-card reveal delay-2">
+      <a class="seo-card-image" href="/therapies/swedana-nadi-swedana.html" aria-label="Read about Swedana / Nadi Swedana"><img src="/images/page-images/swedana-nadi-swedana.svg" alt="Illustration for Swedana / Nadi Swedana at Dr BRC Premier Hospital" width="840" height="620" loading="lazy" decoding="async"></a>
+      <div class="directory-card-top"><span>27</span><span class="card-kind">THERAPY</span></div>
+      <h3><a href="/therapies/swedana-nadi-swedana.html">Swedana / Nadi Swedana</a></h3><p>Read an overview of this traditional therapy and discuss suitability with a qualified healthcare professional.</p>
+      <a class="directory-card-link" href="/therapies/swedana-nadi-swedana.html">Explore details <span>↗</span></a>
+    </article>
+    <article class="directory-card visual-directory-card reveal">
+      <a class="seo-card-image" href="/therapies/takradhara.html" aria-label="Read about Takradhara"><img src="/images/page-images/takradhara.svg" alt="Illustration for Takradhara at Dr BRC Premier Hospital" width="840" height="620" loading="lazy" decoding="async"></a>
+      <div class="directory-card-top"><span>28</span><span class="card-kind">THERAPY</span></div>
+      <h3><a href="/therapies/takradhara.html">Takradhara</a></h3><p>Read an overview of this traditional therapy and discuss suitability with a qualified healthcare professional.</p>
+      <a class="directory-card-link" href="/therapies/takradhara.html">Explore details <span>↗</span></a>
+    </article>
+    <article class="directory-card visual-directory-card reveal delay-0">
+      <a class="seo-card-image" href="/therapies/udwartan.html" aria-label="Read about Udwartan"><img src="/images/page-images/udwartan.svg" alt="Illustration for Udwartan at Dr BRC Premier Hospital" width="840" height="620" loading="lazy" decoding="async"></a>
+      <div class="directory-card-top"><span>29</span><span class="card-kind">THERAPY</span></div>
+      <h3><a href="/therapies/udwartan.html">Udwartan</a></h3><p>Read an overview of this traditional therapy and discuss suitability with a qualified healthcare professional.</p>
+      <a class="directory-card-link" href="/therapies/udwartan.html">Explore details <span>↗</span></a>
+    </article>
+    <article class="directory-card visual-directory-card reveal delay-1">
+      <a class="seo-card-image" href="/therapies/vamana.html" aria-label="Read about Vamana"><img src="/images/page-images/vamana.svg" alt="Illustration for Vamana at Dr BRC Premier Hospital" width="840" height="620" loading="lazy" decoding="async"></a>
+      <div class="directory-card-top"><span>30</span><span class="card-kind">THERAPY</span></div>
+      <h3><a href="/therapies/vamana.html">Vamana</a></h3><p>Read an overview of this traditional therapy and discuss suitability with a qualified healthcare professional.</p>
+      <a class="directory-card-link" href="/therapies/vamana.html">Explore details <span>↗</span></a>
+    </article>
+    <article class="directory-card visual-directory-card reveal delay-2">
+      <a class="seo-card-image" href="/therapies/yoga.html" aria-label="Read about Yoga"><img src="/images/page-images/yoga.svg" alt="Illustration for Yoga at Dr BRC Premier Hospital" width="840" height="620" loading="lazy" decoding="async"></a>
+      <div class="directory-card-top"><span>31</span><span class="card-kind">THERAPY</span></div>
+      <h3><a href="/therapies/yoga.html">Yoga</a></h3><p>Ask our team about yoga, movement and practices that may suit your needs.</p>
+      <a class="directory-card-link" href="/therapies/yoga.html">Explore details <span>↗</span></a>
+    </article>
+    <article class="directory-card visual-directory-card reveal">
+      <a class="seo-card-image" href="/therapies/zero-volt-therapy.html" aria-label="Read about Zero Volt Therapy"><img src="/images/page-images/zero-volt-therapy.svg" alt="Illustration for Zero Volt Therapy at Dr BRC Premier Hospital" width="840" height="620" loading="lazy" decoding="async"></a>
+      <div class="directory-card-top"><span>32</span><span class="card-kind">THERAPY</span></div>
+      <h3><a href="/therapies/zero-volt-therapy.html">Zero Volt Therapy</a></h3><p>Learn about the practice, service availability and suitability through a consultation.</p>
+      <a class="directory-card-link" href="/therapies/zero-volt-therapy.html">Explore details <span>↗</span></a>
+    </article>
   </div>
- </div>
+  <p class="directory-empty" id="therapyEmpty" hidden>No therapies match your search. Try another term.</p>
 </section>
 
 <section class="section disease-directory" id="diseases">
- <div class="wrap">
-  <div class="section-head reveal"><span class="eyebrow">Conditions &amp; care enquiries</span><h2>Information for <span style="color:var(--rust)">your next conversation.</span></h2><p>Explore the conditions listed below and contact our hospital team to ask about available services. This information is not a diagnosis or a substitute for specialist medical care.</p></div>
-  <div class="disease-list">
-   <a class="disease-item reveal" href="/diseases/chronic-kidney-disease.html"><span class="disease-image-slot">CKD image</span><span>01</span><strong>Chronic Kidney Disease (CKD)</strong><span class="disease-arrow">↗</span></a>
-   <a class="disease-item reveal delay-1" href="/diseases/diabetes.html"><span class="disease-image-slot">Diabetes image</span><span>02</span><strong>Diabetes</strong><span class="disease-arrow">↗</span></a>
-   <a class="disease-item reveal delay-2" href="/diseases/thyroid-conditions.html"><span class="disease-image-slot">Thyroid image</span><span>03</span><strong>Thyroid conditions</strong><span class="disease-arrow">↗</span></a>
-   <a class="disease-item reveal delay-3" href="/diseases/chronic-liver-disease.html"><span class="disease-image-slot">Liver image</span><span>04</span><strong>Chronic Liver Disease</strong><span class="disease-arrow">↗</span></a>
-   <a class="disease-item reveal" href="/diseases/cancer.html"><span class="disease-image-slot">Cancer image</span><span>05</span><strong>Cancer</strong><span class="disease-arrow">↗</span></a>
+  <div class="section-head reveal"><span class="eyebrow">Health information</span><h2>Information for your <span style="color:var(--rust)">next conversation.</span></h2><p>Browse all health topics currently listed on our website. This information is for general awareness and is not a diagnosis or a substitute for specialist medical care.</p></div>
+  <div class="directory-toolbar"><label for="diseaseSearch">Find a health topic</label><input id="diseaseSearch" type="search" placeholder="Search diseases and conditions…" autocomplete="off"><span id="diseaseCount">16 topics</span></div>
+  <div class="disease-card-grid" id="diseaseDirectoryGrid">
+    <article class="disease-card reveal delay-0">
+      <a class="disease-card-image" href="/diseases/autism-adhd.html" aria-label="Read about Autism / ADHD"><img src="/images/page-images/autism-adhd.svg" alt="Illustration related to Autism / ADHD" width="840" height="620" loading="lazy" decoding="async"></a>
+      <div class="disease-card-copy"><span class="card-kind">HEALTH INFORMATION · 01</span><h3><a href="/diseases/autism-adhd.html">Autism / ADHD</a></h3><p>General information and questions to discuss with a qualified healthcare professional. Care options depend on individual assessment.</p><a class="directory-card-link" href="/diseases/autism-adhd.html">Explore information <span>↗</span></a></div>
+    </article>
+    <article class="disease-card reveal delay-1">
+      <a class="disease-card-image" href="/diseases/cancer.html" aria-label="Read about Cancer"><img src="/images/page-images/cancer.svg" alt="Illustration related to Cancer" width="840" height="620" loading="lazy" decoding="async"></a>
+      <div class="disease-card-copy"><span class="card-kind">HEALTH INFORMATION · 02</span><h3><a href="/diseases/cancer.html">Cancer</a></h3><p>General information and questions to discuss with a qualified healthcare professional. Care options depend on individual assessment.</p><a class="directory-card-link" href="/diseases/cancer.html">Explore information <span>↗</span></a></div>
+    </article>
+    <article class="disease-card reveal delay-2">
+      <a class="disease-card-image" href="/diseases/chronic-kidney-disease.html" aria-label="Read about Chronic Kidney Disease (CKD)"><img src="/images/page-images/chronic-kidney-disease.svg" alt="Illustration related to Chronic Kidney Disease (CKD)" width="840" height="620" loading="lazy" decoding="async"></a>
+      <div class="disease-card-copy"><span class="card-kind">HEALTH INFORMATION · 03</span><h3><a href="/diseases/chronic-kidney-disease.html">Chronic Kidney Disease (CKD)</a></h3><p>General information and questions to discuss with a qualified healthcare professional. Care options depend on individual assessment.</p><a class="directory-card-link" href="/diseases/chronic-kidney-disease.html">Explore information <span>↗</span></a></div>
+    </article>
+    <article class="disease-card reveal">
+      <a class="disease-card-image" href="/diseases/chronic-liver-disease.html" aria-label="Read about Chronic Liver Disease: Understanding and Follow-Up"><img src="/images/page-images/chronic-liver-disease.svg" alt="Illustration related to Chronic Liver Disease: Understanding and Follow-Up" width="840" height="620" loading="lazy" decoding="async"></a>
+      <div class="disease-card-copy"><span class="card-kind">HEALTH INFORMATION · 04</span><h3><a href="/diseases/chronic-liver-disease.html">Chronic Liver Disease: Understanding and Follow-Up</a></h3><p>General information and questions to discuss with a qualified healthcare professional. Care options depend on individual assessment.</p><a class="directory-card-link" href="/diseases/chronic-liver-disease.html">Explore information <span>↗</span></a></div>
+    </article>
+    <article class="disease-card reveal delay-0">
+      <a class="disease-card-image" href="/diseases/diabetes.html" aria-label="Read about Diabetes"><img src="/images/page-images/diabetes.svg" alt="Illustration related to Diabetes" width="840" height="620" loading="lazy" decoding="async"></a>
+      <div class="disease-card-copy"><span class="card-kind">HEALTH INFORMATION · 05</span><h3><a href="/diseases/diabetes.html">Diabetes</a></h3><p>General information and questions to discuss with a qualified healthcare professional. Care options depend on individual assessment.</p><a class="directory-card-link" href="/diseases/diabetes.html">Explore information <span>↗</span></a></div>
+    </article>
+    <article class="disease-card reveal delay-1">
+      <a class="disease-card-image" href="/diseases/heart-disease.html" aria-label="Read about Heart disease"><img src="/images/page-images/heart-disease.svg" alt="Illustration related to Heart disease" width="840" height="620" loading="lazy" decoding="async"></a>
+      <div class="disease-card-copy"><span class="card-kind">HEALTH INFORMATION · 06</span><h3><a href="/diseases/heart-disease.html">Heart disease</a></h3><p>General information and questions to discuss with a qualified healthcare professional. Care options depend on individual assessment.</p><a class="directory-card-link" href="/diseases/heart-disease.html">Explore information <span>↗</span></a></div>
+    </article>
+    <article class="disease-card reveal delay-2">
+      <a class="disease-card-image" href="/diseases/hypertension.html" aria-label="Read about Hypertension"><img src="/images/page-images/hypertension.svg" alt="Illustration related to Hypertension" width="840" height="620" loading="lazy" decoding="async"></a>
+      <div class="disease-card-copy"><span class="card-kind">HEALTH INFORMATION · 07</span><h3><a href="/diseases/hypertension.html">Hypertension</a></h3><p>General information and questions to discuss with a qualified healthcare professional. Care options depend on individual assessment.</p><a class="directory-card-link" href="/diseases/hypertension.html">Explore information <span>↗</span></a></div>
+    </article>
+    <article class="disease-card reveal">
+      <a class="disease-card-image" href="/diseases/infertility.html" aria-label="Read about Infertility"><img src="/images/page-images/infertility.svg" alt="Illustration related to Infertility" width="840" height="620" loading="lazy" decoding="async"></a>
+      <div class="disease-card-copy"><span class="card-kind">HEALTH INFORMATION · 08</span><h3><a href="/diseases/infertility.html">Infertility</a></h3><p>General information and questions to discuss with a qualified healthcare professional. Care options depend on individual assessment.</p><a class="directory-card-link" href="/diseases/infertility.html">Explore information <span>↗</span></a></div>
+    </article>
+    <article class="disease-card reveal delay-0">
+      <a class="disease-card-image" href="/diseases/kidney-disease.html" aria-label="Read about Kidney disease"><img src="/images/page-images/kidney-disease.svg" alt="Illustration related to Kidney disease" width="840" height="620" loading="lazy" decoding="async"></a>
+      <div class="disease-card-copy"><span class="card-kind">HEALTH INFORMATION · 09</span><h3><a href="/diseases/kidney-disease.html">Kidney disease</a></h3><p>General information and questions to discuss with a qualified healthcare professional. Care options depend on individual assessment.</p><a class="directory-card-link" href="/diseases/kidney-disease.html">Explore information <span>↗</span></a></div>
+    </article>
+    <article class="disease-card reveal delay-1">
+      <a class="disease-card-image" href="/diseases/liver-disease.html" aria-label="Read about Liver disease"><img src="/images/page-images/liver-disease.svg" alt="Illustration related to Liver disease" width="840" height="620" loading="lazy" decoding="async"></a>
+      <div class="disease-card-copy"><span class="card-kind">HEALTH INFORMATION · 10</span><h3><a href="/diseases/liver-disease.html">Liver disease</a></h3><p>General information and questions to discuss with a qualified healthcare professional. Care options depend on individual assessment.</p><a class="directory-card-link" href="/diseases/liver-disease.html">Explore information <span>↗</span></a></div>
+    </article>
+    <article class="disease-card reveal delay-2">
+      <a class="disease-card-image" href="/diseases/lung-disease.html" aria-label="Read about Lung disease"><img src="/images/page-images/lung-disease.svg" alt="Illustration related to Lung disease" width="840" height="620" loading="lazy" decoding="async"></a>
+      <div class="disease-card-copy"><span class="card-kind">HEALTH INFORMATION · 11</span><h3><a href="/diseases/lung-disease.html">Lung disease</a></h3><p>General information and questions to discuss with a qualified healthcare professional. Care options depend on individual assessment.</p><a class="directory-card-link" href="/diseases/lung-disease.html">Explore information <span>↗</span></a></div>
+    </article>
+    <article class="disease-card reveal">
+      <a class="disease-card-image" href="/diseases/pain-management.html" aria-label="Read about Pain management"><img src="/images/page-images/pain-management.svg" alt="Illustration related to Pain management" width="840" height="620" loading="lazy" decoding="async"></a>
+      <div class="disease-card-copy"><span class="card-kind">HEALTH INFORMATION · 12</span><h3><a href="/diseases/pain-management.html">Pain management</a></h3><p>General information and questions to discuss with a qualified healthcare professional. Care options depend on individual assessment.</p><a class="directory-card-link" href="/diseases/pain-management.html">Explore information <span>↗</span></a></div>
+    </article>
+    <article class="disease-card reveal delay-0">
+      <a class="disease-card-image" href="/diseases/skin-disease.html" aria-label="Read about Skin disease"><img src="/images/page-images/skin-disease.svg" alt="Illustration related to Skin disease" width="840" height="620" loading="lazy" decoding="async"></a>
+      <div class="disease-card-copy"><span class="card-kind">HEALTH INFORMATION · 13</span><h3><a href="/diseases/skin-disease.html">Skin disease</a></h3><p>General information and questions to discuss with a qualified healthcare professional. Care options depend on individual assessment.</p><a class="directory-card-link" href="/diseases/skin-disease.html">Explore information <span>↗</span></a></div>
+    </article>
+    <article class="disease-card reveal delay-1">
+      <a class="disease-card-image" href="/diseases/thyroid-conditions.html" aria-label="Read about Thyroid Conditions: Tests and Consultation"><img src="/images/page-images/thyroid-conditions.svg" alt="Illustration related to Thyroid Conditions: Tests and Consultation" width="840" height="620" loading="lazy" decoding="async"></a>
+      <div class="disease-card-copy"><span class="card-kind">HEALTH INFORMATION · 14</span><h3><a href="/diseases/thyroid-conditions.html">Thyroid Conditions: Tests and Consultation</a></h3><p>General information and questions to discuss with a qualified healthcare professional. Care options depend on individual assessment.</p><a class="directory-card-link" href="/diseases/thyroid-conditions.html">Explore information <span>↗</span></a></div>
+    </article>
+    <article class="disease-card reveal delay-2">
+      <a class="disease-card-image" href="/diseases/thyroid-disorders.html" aria-label="Read about Thyroid disorders"><img src="/images/page-images/thyroid-disorders.svg" alt="Illustration related to Thyroid disorders" width="840" height="620" loading="lazy" decoding="async"></a>
+      <div class="disease-card-copy"><span class="card-kind">HEALTH INFORMATION · 15</span><h3><a href="/diseases/thyroid-disorders.html">Thyroid disorders</a></h3><p>General information and questions to discuss with a qualified healthcare professional. Care options depend on individual assessment.</p><a class="directory-card-link" href="/diseases/thyroid-disorders.html">Explore information <span>↗</span></a></div>
+    </article>
+    <article class="disease-card reveal">
+      <a class="disease-card-image" href="/diseases/weight-management.html" aria-label="Read about Weight management"><img src="/images/page-images/weight-management.svg" alt="Illustration related to Weight management" width="840" height="620" loading="lazy" decoding="async"></a>
+      <div class="disease-card-copy"><span class="card-kind">HEALTH INFORMATION · 16</span><h3><a href="/diseases/weight-management.html">Weight management</a></h3><p>General information and questions to discuss with a qualified healthcare professional. Care options depend on individual assessment.</p><a class="directory-card-link" href="/diseases/weight-management.html">Explore information <span>↗</span></a></div>
+    </article>
   </div>
- </div>
+  <p class="directory-empty" id="diseaseEmpty" hidden>No topics match your search. Try another term.</p>
 </section>
 <section class="section approach" id="approach"><div class="wrap approach-grid"><div class="botanical-panel reveal"><div class="botanical-quote"><small>Our philosophy</small><p>“Well-being is built through thoughtful choices, one day at a time.”</p><small>Care that considers the whole person</small></div></div><div class="approach-copy reveal delay-1"><span class="eyebrow">Our approach</span><h2>Care that starts with listening.</h2><p>Every person arrives with a different story, routine and set of priorities. Our approach begins with understanding those individual needs and discussing suitable options with care and clarity.</p><ul class="check-list"><li><span class="check">✓</span><span><strong>Personal conversations</strong><br>Space to discuss your goals, routines and questions.</span></li><li><span class="check">✓</span><span><strong>Guidance tailored to you</strong><br>Recommendations should reflect your needs and professional assessment.</span></li><li><span class="check">✓</span><span><strong>Wellness in everyday life</strong><br>Consider food, rest, movement and lifestyle habits together.</span></li></ul><a class="btn btn-primary" href="#contact">Talk to our team <span class="arrow">↗</span></a></div></div></section>
 
@@ -998,5 +1275,20 @@ if(galleryTrack){
 @media(max-width:560px){.floating-whatsapp{right:14px;bottom:14px;padding:13px;border-radius:50%;width:54px;height:54px;justify-content:center}.floating-whatsapp span{display:none}.floating-whatsapp svg{width:28px;height:28px}}
 @media(prefers-reduced-motion:reduce){.floating-whatsapp{transition:none}}
 </style>
+
+
+<script>
+(function(){
+ function setupDirectory(inputId,gridId,cardSelector,countId,emptyId,unit){
+  var input=document.getElementById(inputId),grid=document.getElementById(gridId),count=document.getElementById(countId),empty=document.getElementById(emptyId);
+  if(!input||!grid)return;
+  var cards=Array.prototype.slice.call(grid.querySelectorAll(cardSelector));
+  function filter(){var q=(input.value||'').toLocaleLowerCase().trim(),visible=0;cards.forEach(function(card){var match=card.textContent.toLocaleLowerCase().indexOf(q)!==-1;card.hidden=!match;if(match)visible++;});if(count)count.textContent=visible+' '+unit+(visible===1?'':'s');if(empty)empty.hidden=visible!==0;}
+  input.addEventListener('input',filter);filter();
+ }
+ if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',init);}else{init();}
+ function init(){setupDirectory('therapySearch','therapyDirectoryGrid','.directory-card','therapyCount','therapyEmpty','therapy');setupDirectory('diseaseSearch','diseaseDirectoryGrid','.disease-card','diseaseCount','diseaseEmpty','topic');}
+})();
+</script>
 
 </body></html>

@@ -1,7 +1,7 @@
 IMAGE AND SEO NOTES
 
-Local illustrative hero images have been added to each generated disease, therapy and service detail page under images/page-images/.
-These are original vector illustrations designed to match the site's dark-green, gold and terracotta palette. They are visual placeholders/illustrations, not clinical photographs or depictions of treatment outcomes. Replace them with approved real hospital/therapy images when available.
-The supplied Dr BRC Premier Hospital logo is used in the header on individual pages. A transparent-background copy is in assets/dr-brc-logo.png.
-The floating WhatsApp button is retained from the existing package.
-Have the clinical team review disease and therapy content before publication.
+The homepage therapy directory now includes every individual therapy page in the therapies folder, with a matching locally stored SVG illustration and link to its dedicated landing page. The health-information directory lists every disease/condition page in the diseases folder and uses the corresponding locally stored SVG illustration. IPD, OPD and Daycare cards also use matching illustrations.
+
+Each detail page uses its matching local illustration where available. These are original stylised vector illustrations for design consistency, not clinical photographs or evidence of treatment outcomes. Replace them with approved hospital/therapy photos when available.
+
+The therapy and disease directories include client-side search to help visitors browse the longer lists. Review all clinical content with the hospital's qualified clinical team before publication. SEO improvements do not guarantee ranking positions; indexing, competition, technical performance and content quality also affect results.
