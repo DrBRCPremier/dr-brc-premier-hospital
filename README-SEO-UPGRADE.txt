@@ -29,3 +29,5 @@ PUBLISH
 4. Review the file changes in GitHub Desktop.
 5. Commit, then Push origin.
 6. Check the homepage, dropdowns, all new pages, the WhatsApp link, and sitemap after GitHub Pages deploys.
+
+Image update: service cards now use photographic assets; therapy directory images were reviewed and assigned without repeating the same image within the 32-card directory. Please review clinical imagery before publication.
