@@ -1,0 +1,31 @@
+DR BRC PREMIER HOSPITAL — RESPONSIVE & PERFORMANCE UPDATE
+
+This package preserves the supplied website copy and page content while improving layout and asset delivery.
+
+WHAT WAS UPDATED
+- Added Google Ads global site tag AW-18190259916 inside the document head of all HTML pages, with duplicate checks.
+- Added one shared responsive stylesheet across the homepage, therapy pages, disease pages, service pages and blog pages.
+- Normalised mobile/tablet/desktop typography, spacing, gutters, image sizing, card widths and touch target sizes.
+- Added a collapsible mobile navigation menu to the secondary pages and improved tablet navigation on the homepage.
+- Moved large homepage images that were embedded as base64 directly in index.html into external WebP files.
+- Created responsive image variants and srcset/sizes so mobile devices can request smaller image files.
+- Added lazy loading and asynchronous image decoding to non-critical images.
+- Converted the shared header logo to WebP and retained the original PNG asset.
+- Corrected internal service-page links that pointed at incorrect folders.
+
+CONTENT
+- Existing visible copy, page titles, headings and treatment/service information have been preserved.
+- Existing therapy listings and supplied images have not been removed or rewritten.
+
+PERFORMANCE NOTES
+- Homepage index.html was reduced from approximately 30.8 MB to approximately 0.65 MB.
+- Embedded homepage images are now separate WebP assets with responsive image variants.
+- Browser caching can now reuse shared CSS, logo and image assets across pages.
+
+SOURCE PACKAGE LIMITATION
+- The uploaded source package did not contain the videos/ folder. The existing homepage reference to /videos/hospital-tour.mp4 has been left in place, but that video file must be added separately for the link to work.
+
+DEPLOYMENT
+- Upload the full contents of this package to the website root, preserving the folder structure.
+- Do not upload the outer ZIP file itself as the site root.
+- After deployment, test the homepage and a sample therapy, disease, service and blog page at mobile, tablet and desktop widths.
